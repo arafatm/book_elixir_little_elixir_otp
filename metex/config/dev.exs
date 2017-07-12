@@ -1,3 +1,3 @@
-if File.exists?("config/dev.secret.exs") do
-  import_config "dev.secret.exs"
-end
+use Mix.Config
+
+import_config "dev.secret.exs"

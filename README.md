@@ -30,6 +30,10 @@ Create a new app
 
 :shipit: [Import OpenWeather API](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/8d1a634)
 
+:shipit: [weather api secret](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/8d1a634)
+
+:shipit: [naive weather worker](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/717c881)
+
 ### 3.4. Creating processes for concurrency
 ####  Receiving messages
 ####  Sending messages

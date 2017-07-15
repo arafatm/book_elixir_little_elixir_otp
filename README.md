@@ -10,7 +10,7 @@
 - The kinds of messages the process can act on are specific to the process itself. In other words, messages are pattern-matched.
 - Other than that, processes **don’t share any information** with other processes.
 
-### 3.2. Building a weather application
+### 3.2. Naive: Building a weather application
 
                                Weather API
 
@@ -21,9 +21,15 @@
     1. Request "Singapore --> Weather Actor --> 2. Response {:ok, 28C}
 
 
-####  The naïve version
+Create a new app
+- :shipit: [# mix new metex](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/ea58302)
+- :shipit: [add deps httpoison and json](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/3d964b9)
+- :shipit: [# mix deps get](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/da8db83)
+
 ### 3.3. The worker
-####  Taking the worker for a spin
+
+:shipit: [Import OpenWeather API](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/8d1a634)
+
 ### 3.4. Creating processes for concurrency
 ####  Receiving messages
 ####  Sending messages

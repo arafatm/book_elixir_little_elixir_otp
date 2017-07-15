@@ -33,6 +33,7 @@ Create a new app
 :shipit: [weather api secret](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/8d1a634)
 
 :shipit: [naive weather worker](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/717c881)
+- note `result = location |> url_for |> HTTPoison.get |> parse_response` 
 
 To test
 ```elixir
@@ -52,6 +53,18 @@ Metex.Worker.temperature_of 'Omicron Persei 8'
 :shipit: [Testing Temperature worker](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/9ec71ef)
 
 ### 3.4. Creating processes for concurrency
+
+For multiple cities we could
+```elixir
+cities = ['Singapore', 'Monaco', 'Vatican City', 'Hong Kong', 'Macau']
+
+cities |> Enum.map(fn city ->
+  Metex.Worker.temperature_of(city)
+end)
+```
+
+:boom: as list of cities grows, time to run api grows. Instead use **concurrency**
+
 ####  Receiving messages
 ####  Sending messages
 ### 3.5. Collecting and manipulating results with another actor

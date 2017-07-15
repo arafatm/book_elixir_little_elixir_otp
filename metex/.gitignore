@@ -1,5 +1,5 @@
 # secrets
-/config/dev.secret.exs
+/config/*.secret.exs
 
 # The directory Mix will write compiled artifacts to.
 /_build

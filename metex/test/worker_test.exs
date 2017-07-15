@@ -13,12 +13,10 @@ defmodule Metex.WorkerTest do
 
   test "loop/0 over multiple locations" do
     cities = ["Singapore", "Monaco", "Vatican City", "Hong Kong", "Macau"]
-    IO.puts inspect self()
     cities |> Enum.each(fn city ->
       pid = spawn(Metex.Worker, :loop, [])
-      IO.puts inspect pid
       send(pid, {self(), city})
     end)
-    # TODO: how do i check results here?
+    assert_receive({:ok, _})
   end
 end                                                                                                                                                      

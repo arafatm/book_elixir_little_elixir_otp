@@ -34,6 +34,23 @@ Create a new app
 
 :shipit: [naive weather worker](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/717c881)
 
+To test
+```elixir
+Metex.Worker.temperature_of 'Verkhoyansk, Russia'
+#'Verkhoyansk, Russia: -37.3°C'
+
+#Just for kicks, let’s try another:
+
+Metex.Worker.temperature_of 'Snag, Yukon, Canada'
+#'Snag, Yukon, Canada: -27.6°C'
+
+#What happens when you give a nonsensical location?
+
+Metex.Worker.temperature_of 'Omicron Persei 8'
+#'Omicron Persei 8 not found'
+```
+:shipit: [Testing Temperature worker](https://github.com/arafatm/book_elixir_little_elixir_otp/commit/9ec71ef)
+
 ### 3.4. Creating processes for concurrency
 ####  Receiving messages
 ####  Sending messages
